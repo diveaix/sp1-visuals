@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SP1 Hypercube Visualizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+  <img src="succinct-logo.webp" alt="Succinct Logo" class="logo" />
+</header>
+  <section class="intro-section">
+    <h1 class="glow-text">Intro: What is SP1?</h1>
+    <p class="subtitle">
+      SP1 is a ZK prover built for high-performance proof generation on arbitrary Rust code.
+    </p>
+    
+    <!-- Floating Sphere Between Subtitle and Scroll -->
+    <div class="floating-sphere-wrapper">
+      <div class="floating-sphere"></div>
+    </div>
+
+    <div class="scroll-down">▼ Scroll Down</div>
+  </section>
+
+
+<section id="stack-section">
+  <h2 class="section-title">How SP1 Works?</h2>
+  <div class="stack-steps">
+    <div class="stack-step" data-key="Rust Code">1. Rust Code</div>
+    <div class="stack-step" data-key="SP1 Compiler">2. SP1 Compiler</div>
+    <div class="stack-step" data-key="Execution Trace">3. Execution Trace</div>
+    <div class="stack-step" data-key="Proof Generation">4. Proof Generation</div>
+    <div class="stack-step" data-key="Verifier">5. Verifier</div>
+  </div>
+  <div class="hover-description"></div>
+</section>
+
+<section class="trace-section">
+  <h2 class="section-title">Execution Trace → Pages</h2>
+  <p class="trace-subtitle">
+  As the execution trace unfolds, SP1 splits it into pages for proof generation.
+  </p>
+
+  <div class="trace-visual"></div>
+</section>
+
+<section id="proof-section">
+  <h2 class="section-title">Proof Generation</h2>
+  <p class="proof-subtitle">
+    SP1 takes all the execution pages and compresses them into a succinct zero-knowledge proof.
+  </p>
+
+  <div class="proof-visual">
+    <div class="proof-pages">
+      <div class="page-block"></div>
+      <div class="page-block"></div>
+      <div class="page-block"></div>
+      <div class="page-block"></div>
+      <div class="page-block"></div>
+      <div class="page-block"></div>
+    </div>
+
+    <div class="proof-core">SP1</div>
+    <div class="proof-output">ZK<br>Proof</div>
+  </div>
+</section>
+
+<section id="verifier-section">
+  <h2 class="section-title">The Verifier</h2>
+  <p class="verifier-subtitle">
+    The ZK proof is verified efficiently by anyone, ensuring correctness without revealing computation.
+  </p>
+
+  <div class="verifier-visual">
+    <div class="zk-proof-block">ZK<br>Proof</div>
+    <div class="verifier-node">Verifier</div>
+    <div class="verified-check">✅</div>
+  </div>
+</section>
+
+
+<script type="module">
+  import { initStackSection } from './main.js';
+
+  window.addEventListener('DOMContentLoaded', () => {
+    initStackSection();
+  });
+
+</script>  
+
+<script type="module">
+  import { initStackSection, initTraceSection } from './main.js';
+
+  window.addEventListener('DOMContentLoaded', () => {
+    initStackSection();
+    initTraceSection();
+  });
+</script>
+
+<footer class="footer-bar">
+  Built by <a href="https://x.com/Diveaix" target="_blank">@Diveaix</a>, 
+  proving the world's software <a href="https://x.com/SuccinctLabs" target="_blank">@SuccinctLabs</a>
+</footer>
+
+
+</body>
+</html>
